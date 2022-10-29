@@ -3,8 +3,10 @@ package main
 import (
 	"gin-july/common"
 	"gin-july/router"
+	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
+	"log"
 )
 
 func main() {
@@ -32,5 +34,9 @@ func main() {
 	}
 
 	// run
-	panic(r.Run()) // listen and serve on 0.0.0.0:8080
+	//panic(r.Run()) // listen and serve on 0.0.0.0:8080
+
+	if err := endless.ListenAndServe(":"+port, r); err != nil {
+		log.Fatalf("listen: %s\n", err)
+	}
 }
