@@ -1,0 +1,21 @@
+server:
+  port: 8080
+mysql:
+  july:
+    driverName: mysql
+    host: localhost
+    port: 3306
+    database: julyaoao
+    username: root
+    password: cja19950715
+    charset: utf8
+    loc: Asia/Shanghai
+  kf:
+    driverName: mysql
+    host: localhost
+    port: 3306
+    database: julyaoao
+    username: root
+    password: cja19950715
+    charset: utf8
+    loc: Asia/Shanghai
