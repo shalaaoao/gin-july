@@ -15,6 +15,8 @@ func main() {
 	// config
 	common.InitConfig()
 
+	// 连接数据库
+
 	// logging
 	common.InitLogrus()
 
@@ -26,7 +28,6 @@ func main() {
 
 	// router
 	r = router.CollectApiRoute(r)
-
 	// port
 	port := viper.GetString("server.port")
 	if port != "" {
